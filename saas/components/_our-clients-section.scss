@@ -17,6 +17,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   flex-basis: calc((100% - 11.25rem) / 6);
   height: 5.75rem;
   border: 0.06rem solid rgba(175, 177, 184, 1);

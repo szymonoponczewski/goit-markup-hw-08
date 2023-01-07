@@ -1,3 +1,13 @@
+// @media (min-width: 768px) {
+//   .wrapper__list {
+//     display: flex;
+//     max-width: 768px;
+//     flex-direction: column;
+//     row-gap: 30px;
+//     background-color: green;
+//   }
+// }
+
 .our-team {
   @extend .section;
   background-color: $DefaultBackgroundColor;

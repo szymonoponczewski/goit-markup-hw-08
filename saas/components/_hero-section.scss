@@ -27,6 +27,11 @@
   margin: 6.625rem 15.75rem 1.875rem;
 }
 
+@media (max-width: 1200px) {
+  .our-work {
+    display: none;
+  }
+}
 .our-work {
   @extend .section;
 }
