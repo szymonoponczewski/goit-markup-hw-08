@@ -1,0 +1,68 @@
+.product-set {
+  @extend .list-display;
+  flex-wrap: wrap;
+  row-gap: 2rem;
+}
+
+.set__product-item {
+  flex-basis: calc((100% - 5.62rem) / 3);
+  transition-property: box-shadow;
+  transition-duration: $TransitionDuration;
+  transition-timing-function: $TransitionTimingFunction;
+
+  &:hover {
+    box-shadow: 0rem 0.06rem 0.06rem rgba(0, 0, 0, 0.12), 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.06),
+      0.06rem 0.25rem 0.36rem rgba(0, 0, 0, 0.16);
+    cursor: pointer;
+
+    .image__overlay {
+      transform: translateY(0);
+    }
+  }
+}
+
+.product-item__image {
+  display: block;
+  position: relative;
+  // overflow: hidden;
+  width: 100%;
+  height: 18.38rem;
+}
+
+.image__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $ProductOverlayColor;
+  transform: translateY(100%);
+  transition-duration: $TransitionDuration;
+  transition-timing-function: $TransitionTimingFunction;
+}
+
+.overlay__text {
+  font-size: 1.13rem;
+  line-height: 1.56;
+  color: $SecondaryFontColor;
+  margin: 3.06rem 2.81rem 3.06rem 1.5rem;
+}
+
+.product-item__footer {
+  padding: 1.37rem 1.5rem;
+  border: solid $ProductBorderColor;
+  border-width: 0rem 0.05rem 0.05rem 0.05rem;
+}
+
+.footer__product-name {
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.06em;
+  line-height: 2;
+}
+
+.footer__product-type {
+  color: $ClickablesColor;
+  font-size: 1rem;
+  line-height: 1.9;
+}

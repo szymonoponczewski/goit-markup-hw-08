@@ -1,0 +1,48 @@
+.our-team {
+  @extend .section;
+  background-color: $DefaultBackgroundColor;
+}
+
+.our-team__wrapper {
+  @extend .container;
+}
+
+.wrapper__header {
+  @extend .hero-header;
+}
+
+.wrapper__list {
+  @extend .list-display;
+}
+
+.list__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 0.63rem;
+  padding-bottom: 1.88rem;
+  background-color: $SecondaryFontColor;
+  box-shadow: 0rem 0.06rem 0.19rem rgba(0, 0, 0, 0.12), 0rem 0.06rem 0.06rem rgba(0, 0, 0, 0.14),
+    0rem 0.13rem 0.06rem rgba(0, 0, 0, 0.2);
+  border-radius: 0rem 0rem 0.25rem 0.25rem;
+}
+
+.card__image {
+  display: block;
+  margin-bottom: 1.25rem;
+}
+
+.card__name {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+}
+
+.card__job {
+  color: $ClickablesColor;
+  font-size: 1rem;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+}

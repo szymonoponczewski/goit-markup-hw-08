@@ -1,0 +1,168 @@
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $BackdropColor;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 33rem;
+  height: 36.31rem;
+  padding: 2.5rem;
+  background-color: $ModalBackgroundColor;
+  transform: translate(-50%, -50%);
+  transition-duration: $TransitionDuration;
+  transition-timing-function: $TransitionTimingFunction;
+}
+
+.backdrop.is-hidden {
+  .modal {
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+}
+
+.is-hidden {
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+  transition-duration: $TransitionDuration;
+  transition-timing-function: $TransitionTimingFunction;
+}
+
+.contact__modal-form {
+  position: relative;
+  display: flex;
+  row-gap: 0.63rem;
+  flex-direction: column;
+}
+
+.modal-form__header {
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.44rem;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.5rem;
+  color: $DefaultFontColor;
+}
+
+.modal-form__label {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 0.25rem;
+  font-size: 0.75rem;
+  line-height: 0.88rem;
+  letter-spacing: 0.01em;
+  color: $ModalFormLabelColor;
+}
+
+.label__input {
+  width: 28rem;
+  height: 2.5rem;
+  padding-left: 2.63rem;
+  border: 0.06rem solid rgba(33, 33, 33, 0.2);
+  border-radius: 0.25rem;
+  outline: none;
+  transition: border $TransitionDuration $TransitionTimingFunction;
+
+  &:focus {
+    border: 0.06rem solid $HoverColor;
+    border: 0.06rem solid $HoverColor;
+    + {
+      .input__modal-icon {
+        fill: $HoverColor;
+      }
+    }
+  }
+}
+
+.modal-form__footer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.88rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.03em;
+  color: $ClickablesColor;
+}
+
+.form-footer__policy-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.policy-label__input {
+  position: absolute;
+  display: inline-block;
+  left: 0.81rem;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.policy-label__checkbox-unchecked {
+  margin-right: 0.44rem;
+}
+
+.policy-label__checkbox-checked {
+  margin-right: 0.44rem;
+  display: none;
+  fill: $FormFooterCheckboxColor;
+}
+
+.policy-label__input:focus + .policy-label__checkbox-unchecked {
+  box-shadow: 0 0 0 0.19rem $HoverColor;
+}
+
+.policy-label__input:checked ~ .policy-label__checkbox-checked {
+  display: inline-block;
+}
+
+.policy-label__input:checked + .policy-label__checkbox-unchecked {
+  display: none;
+}
+
+.policy-label__link {
+  text-decoration: underline;
+  color: $LinkUnderlineColor;
+}
+
+.modal-form__comment {
+  resize: none;
+  padding: 0.75rem 1rem;
+  border: 0.06rem solid rgba(33, 33, 33, 0.2);
+  border-radius: 0.25rem;
+  outline: none;
+  transition: border $TransitionDuration $TransitionTimingFunction;
+
+  &:focus {
+    border: 0.06rem solid $HoverColor;
+  }
+
+  &::placeholder {
+    font-size: 0.75rem;
+    line-height: 0.88rem;
+    letter-spacing: 0.01em;
+    color: $ModalFormPlaceholderColor;
+  }
+}
+
+.input__modal-icon {
+  position: absolute;
+  left: 0.88rem;
+  top: 1.81rem;
+  fill: rgb(33, 33, 33);
+  transition: fill $TransitionDuration $TransitionTimingFunction;
+}

@@ -1,0 +1,140 @@
+.header {
+  padding: 1.5rem 0rem 1.563rem;
+  border-bottom: 0.06rem solid rgb(236, 236, 236);
+}
+
+.header__wrapper {
+  @extend .container;
+  @extend .list-display;
+  justify-content: flex-start;
+}
+
+.wrapper__mail-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.63rem;
+  &:hover {
+    .mail-section__envelope-icon {
+      fill: $HoverColor;
+    }
+    .mail-section__link {
+      color: $HoverColor;
+    }
+  }
+  &:has(> .mail-section__link:focus) {
+    .mail-section__envelope-icon {
+      fill: $HoverColor;
+    }
+  }
+}
+
+.wrapper-tel-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.63rem;
+  &:hover {
+    .tel-section__smartphone-icon {
+      fill: $HoverColor;
+    }
+    .tel-section__link {
+      color: $HoverColor;
+    }
+  }
+  &:has(> .tel-section__link:focus) {
+    .tel-section__smartphone-icon {
+      fill: $HoverColor;
+    }
+  }
+}
+
+.mail-section__link {
+  color: $ClickablesColor;
+  font-weight: 500;
+  font-size: 0.9rem;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  transition-property: color;
+  transition-duration: $TransitionDuration;
+  transition-timing-function: $TransitionTimingFunction;
+  margin-right: 1.9rem;
+  &:focus {
+    color: $HoverColor;
+  }
+}
+
+.tel-section__link {
+  color: $ClickablesColor;
+  font-weight: 500;
+  font-size: 0.9rem;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  transition-property: color;
+  transition-duration: $TransitionDuration;
+  transition-timing-function: $TransitionTimingFunction;
+  &:focus {
+    color: $HoverColor;
+  }
+}
+
+.mail-section__envelope-icon {
+  fill: rgba(117, 117, 117, 1);
+  cursor: pointer;
+  transition-property: fill;
+  transition-duration: $TransitionDuration;
+  transition-timing-function: $TransitionTimingFunction;
+}
+
+.tel-section__smartphone-icon {
+  fill: rgba(117, 117, 117, 1);
+  cursor: pointer;
+  transition-property: fill;
+  transition-duration: $TransitionDuration;
+  transition-timing-function: $TransitionTimingFunction;
+}
+
+.wrapper__main-nav {
+  flex: 1;
+}
+
+.main-nav__list {
+  @extend .list-display;
+  justify-content: flex-start;
+  column-gap: 2.9rem;
+}
+
+.nav-item__link {
+  font-weight: 500;
+  font-size: 0.9rem;
+  line-height: 1.03;
+  letter-spacing: 0.02em;
+  transition-property: color;
+  transition-duration: $TransitionDuration;
+  transition-timing-function: $TransitionTimingFunction;
+  &:hover {
+    color: $HoverColor;
+  }
+  &:focus {
+    color: $HoverColor;
+  }
+}
+
+.nav-item__link.nav-item__link--is-active {
+  color: $HoverColor;
+}
+
+.nav-item__link--is-active {
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 2.84rem;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+    height: 0.25rem;
+    background-color: $HoverColor;
+    border-radius: 0.13rem;
+  }
+}

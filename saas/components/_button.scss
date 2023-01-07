@@ -1,0 +1,104 @@
+.button {
+  background-color: $HoverColor;
+  color: $SecondaryFontColor;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.06em;
+  line-height: 1.9;
+  border: none;
+  transition: background-color $TransitionDuration $TransitionTimingFunction;
+  box-shadow: 0rem 0.24rem 0.25rem rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+  cursor: pointer;
+  &:hover {
+    background-color: $ButtonHoverColor;
+  }
+  &:focus {
+    background-color: $ButtonHoverColor;
+  }
+}
+
+.main-header__button {
+  @extend .button;
+}
+
+.main-header__button--order {
+  padding: 0.63rem 2.56rem 0.63rem 2.63rem;
+  margin-bottom: 6.625rem;
+}
+
+.element__nav-button {
+  background-color: $DefaultBackgroundColor;
+  color: $DefaultFontColor;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.37rem 1.38rem;
+  line-height: 1.6;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition-property: background-color, color;
+  transition-duration: $TransitionDuration;
+  transition-timing-function: $TransitionTimingFunction;
+  &:hover {
+    background-color: $HoverColor;
+    color: $SecondaryFontColor;
+    box-shadow: 0rem 0.19rem 0.06rem rgba(0, 0, 0, 0.1), 0rem 0.06rem 0.13rem rgba(0, 0, 0, 0.08),
+      0rem 0.13rem 0.13rem rgba(0, 0, 0, 0.12);
+  }
+  &:focus {
+    background-color: $HoverColor;
+    color: $SecondaryFontColor;
+    box-shadow: 0rem 0.19rem 0.06rem rgba(0, 0, 0, 0.1), 0rem 0.06rem 0.13rem rgba(0, 0, 0, 0.08),
+      0rem 0.13rem 0.13rem rgba(0, 0, 0, 0.12);
+  }
+}
+
+.group__form-button {
+  @extend .button;
+}
+
+.group__form-button--newsletter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1.5rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 12.5rem;
+  height: 3.13rem;
+}
+
+.modal__close-button {
+  position: absolute;
+  width: 1.88rem;
+  height: 1.88rem;
+  top: 0.5rem;
+  right: 0.5rem;
+  border: 0.06rem solid rgba(0, 0, 0, 0.1);
+  background-color: $ModalCloseButtonColor;
+  border-radius: 50%;
+  transition-property: background-color, color;
+  transition-duration: $TransitionDuration;
+  transition-timing-function: $TransitionTimingFunction;
+  &:hover,
+  &:focus {
+    background-color: $ModalCloseButtonHoverColor;
+    color: $SecondaryFontColor;
+    cursor: pointer;
+  }
+}
+
+.contact__button {
+  @extend .button;
+}
+
+.contact__button--modal {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12.5rem;
+  height: 3.13rem;
+}

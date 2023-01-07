@@ -1,0 +1,32 @@
+.page-logo {
+  font-family: $SecondaryFontFamily;
+  font-weight: 700;
+  font-size: 1.625rem;
+  line-height: 1.18;
+  letter-spacing: 0.03em;
+}
+
+.wrapper__page-logo--left {
+  color: $HoverColor;
+}
+
+.wrapper__page-logo--right {
+  color: rgba(0, 0, 0, 1);
+  margin-right: 5.8rem;
+}
+
+.wrapper__page-logo {
+  @extend .page-logo;
+}
+
+.address__logo {
+  @extend .page-logo;
+}
+
+.address__logo--left {
+  color: $HoverColor;
+}
+
+.address__logo--right {
+  color: $SecondaryFontColor;
+}

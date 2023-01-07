@@ -1,0 +1,73 @@
+.links__icon-set {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  transition-property: background-color, fill;
+  transition-duration: $TransitionDuration;
+  transition-timing-function: $TransitionTimingFunction;
+  cursor: pointer;
+  &:hover {
+    background-color: $HoverColor;
+    .link__instagram-icon,
+    .link__twitter-icon,
+    .link__facebook-icon,
+    .link__linkedin-icon {
+      fill: $SecondaryFontColor;
+    }
+  }
+}
+
+.links__icon-set {
+  .icon-set__link {
+    width: 1.875rem;
+    height: 1.875rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.link__instagram-icon,
+.link__twitter-icon,
+.link__facebook-icon,
+.link__linkedin-icon {
+  fill: $SocialLinkColor;
+  &:hover {
+    fill: $HoverIconFillColor;
+  }
+}
+
+.icon-set__link:focus {
+  .link__instagram-icon,
+  .link__twitter-icon,
+  .link__facebook-icon,
+  .link__linkedin-icon {
+    fill: $HoverIconFillColor;
+  }
+}
+
+.links__icon-set {
+  &:has(> .icon-set__link:focus) {
+    background-color: $HoverColor;
+  }
+}
+
+.social__links {
+  @extend .list-display;
+  column-gap: 0.63rem;
+  margin-top: 0.38rem;
+}
+
+.links__icon-set--footerbg {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.instagram-icon--footer-color,
+.twitter-icon--footer-color,
+.facebook-icon--footer-color,
+.linkedin-icon--footer-color {
+  fill: $HoverIconFillColor;
+}

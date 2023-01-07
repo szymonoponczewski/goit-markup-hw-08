@@ -1,0 +1,64 @@
+.main-slogan {
+  @extend .section;
+  max-width: 100rem;
+  margin: 0 auto;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url('../images/section/header_background.jpg');
+  background-color: rgba(47, 48, 58, 0.4);
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+}
+
+.main-slogan__wrapper {
+  @extend .container;
+}
+
+.wrapper__main-header {
+  color: $SecondaryFontColor;
+  text-transform: uppercase;
+  text-align: center;
+  width: 43.5rem;
+  margin-top: 6.63rem;
+  font-weight: 900;
+  font-size: 2.75rem;
+  letter-spacing: 0.06em;
+  line-height: 1.36;
+  margin: 6.625rem 15.75rem 1.875rem;
+}
+
+.our-work {
+  @extend .section;
+}
+
+.our-work__wrapper {
+  @extend .container;
+}
+
+.wrapper__work-list {
+  @extend .list-display;
+}
+
+.work-list__item {
+  position: relative;
+}
+
+.item__work-name {
+  position: absolute;
+  left: 0;
+  top: 14rem;
+  width: 100%;
+  height: 4.38rem;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
+.work-name__slogan {
+  font-weight: 700;
+  font-size: 0.88rem;
+  line-height: 1rem;
+  text-align: center;
+  margin-top: 1.69rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $SecondaryFontColor;
+}
