@@ -102,3 +102,17 @@
   width: 12.5rem;
   height: 3.13rem;
 }
+
+.js-close-menu {
+  position: absolute;
+  width: 1.88rem;
+  height: 1.88rem;
+  top: 0.5rem;
+  right: 0.5rem;
+  border: 0.06rem solid rgba(0, 0, 0, 0.1);
+  background-color: $ModalCloseButtonColor;
+  border-radius: 50%;
+  transition-property: background-color, color;
+  transition-duration: $TransitionDuration;
+  transition-timing-function: $TransitionTimingFunction;
+}

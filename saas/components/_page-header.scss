@@ -98,6 +98,14 @@
   flex: 1;
 }
 
+@media (max-width: 767px) {
+  .main-nav__list,
+  .wrapper__mail-section,
+  .wrapper-tel-section {
+    display: none;
+  }
+}
+
 .main-nav__list {
   @extend .list-display;
   justify-content: flex-start;
