@@ -1,12 +1,14 @@
 .header {
-  padding: 1.5rem 0rem 1.563rem;
+  padding: 25px 0 21px;
   border-bottom: 0.06rem solid rgb(236, 236, 236);
 }
 
 .header__wrapper {
-  @extend .container;
-  @extend .list-display;
+  list-style: none;
+  display: flex;
+  align-items: center;
   justify-content: flex-start;
+  padding: 0 15px;
 }
 
 .wrapper__mail-section {
@@ -58,7 +60,6 @@
   transition-property: color;
   transition-duration: $TransitionDuration;
   transition-timing-function: $TransitionTimingFunction;
-  margin-right: 1.9rem;
   &:focus {
     color: $HoverColor;
   }
@@ -98,16 +99,11 @@
   flex: 1;
 }
 
-@media (max-width: 767px) {
-  .main-nav__list,
-  .wrapper__mail-section,
-  .wrapper-tel-section {
-    display: none;
-  }
-}
-
 .main-nav__list {
-  @extend .list-display;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   justify-content: flex-start;
   column-gap: 2.9rem;
 }
@@ -144,5 +140,56 @@
     height: 0.25rem;
     background-color: $HoverColor;
     border-radius: 0.13rem;
+  }
+}
+
+// PHONE //
+@media (max-width: $PhoneEnd) {
+  .main-nav__list,
+  .wrapper__contact-section {
+    display: none;
+  }
+}
+
+// TABLET //
+@media screen and (min-width: $TabletStart) and (max-width: $TabletEnd) {
+  .wrapper__contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    row-gap: 0.625rem;
+  }
+  .mail-section__link,
+  .tel-section__link {
+    font-size: 0.75rem;
+  }
+}
+
+// DESKTOP //
+@media screen and (min-width: $DesktopStart) {
+  .header {
+    padding: 25px 0 21px;
+    &__wrapper {
+      margin: 0 auto;
+      max-width: 75rem;
+      min-width: 20rem;
+      padding: 0 0.938rem;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  .wrapper__contact-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    column-gap: 1.875rem;
+  }
+
+  .wrapper__page-logo {
+    font-size: 26px;
   }
 }
