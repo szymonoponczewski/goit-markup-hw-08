@@ -38,6 +38,12 @@
   &:hover {
     fill: $HoverIconFillColor;
   }
+  &--gray,
+  &--gray,
+  &--gray,
+  &--gray {
+    fill: $SocialLinkColor;
+  }
 }
 
 .icon-set__link:focus {
