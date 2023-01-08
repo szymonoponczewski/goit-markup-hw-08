@@ -1,38 +1,36 @@
 .main-slogan {
-  @extend .section;
-  max-width: 100rem;
   margin: 0 auto;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url('../images/section/header_background.jpg');
   background-color: rgba(47, 48, 58, 0.4);
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .main-slogan__wrapper {
   @extend .container;
+  text-align: center;
+  padding: 118px 58px 118px 57px;
 }
 
 .wrapper__main-header {
   color: $SecondaryFontColor;
   text-transform: uppercase;
   text-align: center;
-  width: 43.5rem;
-  margin-top: 6.63rem;
+  width: 365px;
+  margin-bottom: 30px;
   font-weight: 900;
-  font-size: 2.75rem;
+  font-size: 1.625rem;
   letter-spacing: 0.06em;
-  line-height: 1.36;
-  margin: 6.625rem 15.75rem 1.875rem;
+  line-height: 1.6;
 }
 
-@media (max-width: 1200px) {
-  .our-work {
-    display: none;
-  }
-}
 .our-work {
+  display: none;
   @extend .section;
 }
 
@@ -66,4 +64,25 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: $SecondaryFontColor;
+}
+
+// DESKTOP //
+@media screen and (min-width: $DesktopStart) {
+  .our-work {
+    display: block;
+  }
+
+  .main-slogan {
+    max-width: 100rem;
+  }
+
+  .main-slogan__wrapper {
+    padding: 200px 0;
+  }
+
+  .wrapper__main-header {
+    width: 43.5rem;
+    font-size: 2.75rem;
+    line-height: 1.4;
+  }
 }

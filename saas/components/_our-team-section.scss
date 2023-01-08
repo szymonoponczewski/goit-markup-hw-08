@@ -1,16 +1,6 @@
-// @media (min-width: 768px) {
-//   .wrapper__list {
-//     display: flex;
-//     max-width: 768px;
-//     flex-direction: column;
-//     row-gap: 30px;
-//     background-color: green;
-//   }
-// }
-
 .our-team {
-  @extend .section;
   background-color: $DefaultBackgroundColor;
+  padding: 3.75rem 0;
 }
 
 .our-team__wrapper {
@@ -23,6 +13,7 @@
 
 .wrapper__list {
   @extend .list-display;
+  flex-wrap: wrap;
 }
 
 .list__card {
@@ -30,7 +21,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  row-gap: 0.63rem;
+  width: 100%;
   padding-bottom: 1.88rem;
   background-color: $SecondaryFontColor;
   box-shadow: 0rem 0.06rem 0.19rem rgba(0, 0, 0, 0.12), 0rem 0.06rem 0.06rem rgba(0, 0, 0, 0.14),
@@ -41,6 +32,7 @@
 .card__image {
   display: block;
   margin-bottom: 1.25rem;
+  margin-bottom: 1.875rem;
 }
 
 .card__name {
@@ -48,6 +40,7 @@
   font-size: 1rem;
   line-height: 1.17;
   letter-spacing: 0.03em;
+  margin-bottom: 0.625rem;
 }
 
 .card__job {
@@ -55,4 +48,28 @@
   font-size: 1rem;
   line-height: 1.17;
   letter-spacing: 0.03em;
+  margin-bottom: 1rem;
+}
+
+// TABLET //
+@media screen and (min-width: $TabletStart) and (max-width: $TabletEnd) {
+  .list__card {
+    flex-basis: calc((100% - 1.875rem) / 2);
+  }
+}
+
+// DESKTOP //
+@media screen and (min-width: $DesktopStart) {
+  .wrapper__list {
+    @extend .list-display;
+    flex-wrap: nowrap;
+  }
+
+  .our-team {
+    padding: 5.875rem 0;
+  }
+
+  .list__card {
+    flex-basis: calc((100% - 7.5rem) / 4);
+  }
 }

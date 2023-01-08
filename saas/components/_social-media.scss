@@ -34,7 +34,7 @@
 .link__twitter-icon,
 .link__facebook-icon,
 .link__linkedin-icon {
-  fill: $SocialLinkColor;
+  fill: $HoverIconFillColor;
   &:hover {
     fill: $HoverIconFillColor;
   }
@@ -58,7 +58,7 @@
 .social__links {
   @extend .list-display;
   column-gap: 0.63rem;
-  margin-top: 0.38rem;
+  // margin-top: 0.38rem;
 }
 
 .links__icon-set--footerbg {

@@ -24,7 +24,7 @@
 
 .main-header__button--order {
   padding: 0.63rem 2.56rem 0.63rem 2.63rem;
-  margin-bottom: 6.625rem;
+  // margin-bottom: 6.625rem;
 }
 
 .element__nav-button {
@@ -56,18 +56,6 @@
 
 .group__form-button {
   @extend .button;
-}
-
-.group__form-button--newsletter {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  column-gap: 1.5rem;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 12.5rem;
-  height: 3.13rem;
 }
 
 .modal__close-button {

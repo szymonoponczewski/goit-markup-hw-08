@@ -1,6 +1,5 @@
 .main-description {
-  @extend .section;
-  padding-bottom: 0;
+  padding: 3.75rem 0;
 }
 
 .main-description__wrapper {
@@ -9,34 +8,62 @@
 
 .wrapper__description-set {
   @extend .list-display;
-  column-gap: 1.875rem;
-}
-
-.description-set__item {
-  flex-basis: calc((100% - 5.6rem) / 4);
+  flex-wrap: wrap;
+  gap: 1.875rem;
 }
 
 .group__card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: $MainDescriptionCardColor;
   height: 7.5rem;
-  margin-bottom: 1.88rem;
-  padding-left: 6.48rem;
-  padding-top: 1.56rem;
+  margin-bottom: 1.875rem;
 }
 
 .group__header {
+  text-align: center;
   text-transform: uppercase;
   margin-bottom: 0.63rem;
   font-weight: 700;
-  font-size: 0.86rem;
+  font-size: 0.875rem;
   line-height: 1.17;
   letter-spacing: 0.03em;
 }
 
 .group__paragraph {
   color: $ClickablesColor;
-  width: 16.9rem;
-  font-size: 0.86rem;
+  font-size: 0.875rem;
   line-height: 1.7;
   letter-spacing: 0.03em;
+}
+
+// TABLET //
+@media screen and (min-width: $TabletStart) and (max-width: $TabletEnd) {
+  .description-set__item {
+    flex-basis: calc((100% - 1.875rem) / 2);
+  }
+
+  .group__header {
+    text-align: left;
+  }
+}
+
+// DESKTOP //
+@media screen and (min-width: $DesktopStart) {
+  .main-description {
+    padding: 5.875rem 0 0 0;
+  }
+
+  .description-set__item {
+    flex-basis: calc((100% - 5.6rem) / 4);
+  }
+
+  .wrapper__description-set {
+    flex-wrap: nowrap;
+  }
+
+  .group__header {
+    text-align: left;
+  }
 }
