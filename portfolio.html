@@ -25,28 +25,33 @@
         <nav class="wrapper__main-nav">
           <ul class="main-nav__list">
             <li class="list__nav-item">
-              <a class="nav-item__link" href="./index.html">Agencja</a>
+              <a class="nav-item__link nav-item__link--is-active" href="./index.html">Agencja</a>
             </li>
             <li>
-              <a class="nav-item__link nav-item__link--is-active" href="portfolio.html"
-                >Portfolio
-              </a>
+              <a class="nav-item__link" href="portfolio.html">Portfolio </a>
             </li>
             <li><a class="nav-item__link" href="">Kontakt</a></li>
           </ul>
         </nav>
-        <div class="wrapper__mail-section">
-          <svg class="mail-section__envelope-icon" width="16" height="13">
-            <use href="images/icons.svg#icon-envelope"></use>
-          </svg>
-          <a class="mail-section__link" href="mailto:info@devstudio.com"> info@devstudio.com </a>
+        <div class="wrapper__contact-section">
+          <div class="wrapper__mail-section">
+            <svg class="mail-section__envelope-icon" width="16" height="13">
+              <use href="images/icons.svg#icon-envelope"></use>
+            </svg>
+            <a class="mail-section__link" href="mailto:info@devstudio.com"> info@devstudio.com </a>
+          </div>
+          <div class="wrapper-tel-section">
+            <svg class="tel-section__smartphone-icon" width="11" height="16">
+              <use href="images/icons.svg#icon-smartphone"></use>
+            </svg>
+            <a class="tel-section__link" href="tel:48111111111">+48 111 111 111</a>
+          </div>
         </div>
-        <div class="wrapper-tel-section">
-          <svg class="tel-section__smartphone-icon" width="11" height="16">
-            <use href="images/icons.svg#icon-smartphone"></use>
+        <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg class="mobile-menu__icon" width="40" height="40">
+            <use href="images/icons.svg#icon-hamburger"></use>
           </svg>
-          <a class="tel-section__link" href="tel:48111111111">+48 111 111 111</a>
-        </div>
+        </button>
       </div>
     </header>
     <main>
@@ -339,6 +344,47 @@
         </form>
       </div>
     </footer>
+    <div class="mobile-menu js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">&#10005;</button>
+      <div class="mobile-menu__wrapper">
+        <ul class="mobile-menu__list">
+          <li class="mobile-menu__item">
+            <a href="index.html" class="mobile-menu__link">Agencja</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a href="portfolio.html" class="mobile-menu__link">Portfolio</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a href="#" class="mobile-menu__link">Kontakt</a>
+          </li>
+        </ul>
+        <div class="mobile-menu-contact">
+          <p class="mobile-menu__tel">
+            <a href="tel:+48111111111" class="mobile-menu__tel-link">+48 111 111 111</a>
+          </p>
+          <p class="mobile-menu__mail">
+            <a href="mailto:info@devstudio.com" class="mobile-menu__mail-link"
+              >info@devstudio.com</a
+            >
+          </p>
+          <ul class="mobile-menu__socials">
+            <li class="mobile-menu__socials-item">
+              <a class="mobile-menu__socials-link" href="#">Instagram</a>
+            </li>
+            <li class="mobile-menu__socials-item">
+              <a class="mobile-menu__socials-link" href="#">Twitter</a>
+            </li>
+            <li class="mobile-menu__socials-item">
+              <a class="mobile-menu__socials-link" href="#">Facebook</a>
+            </li>
+            <li class="mobile-menu__socials-item">
+              <a class="mobile-menu__socials-link" href="#">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
     <script
       defer
       src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"

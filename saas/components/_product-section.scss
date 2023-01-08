@@ -1,3 +1,7 @@
+.portfolio__product {
+  @extend .container;
+}
+
 .product-set {
   @extend .list-display;
   flex-wrap: wrap;
@@ -5,7 +9,7 @@
 }
 
 .set__product-item {
-  flex-basis: calc((100% - 5.62rem) / 3);
+  flex-basis: 100%;
   transition-property: box-shadow;
   transition-duration: $TransitionDuration;
   transition-timing-function: $TransitionTimingFunction;
@@ -65,4 +69,16 @@
   color: $ClickablesColor;
   font-size: 1rem;
   line-height: 1.9;
+}
+
+// TABLET //
+// @media screen and (min-width: $TabletStart) and (max-width: $TabletEnd) {
+
+// }
+
+// DESKTOP //
+@media screen and (min-width: $DesktopStart) {
+  .set__product-item {
+    flex-basis: calc((100% - 5.62rem) / 3);
+  }
 }

@@ -10,6 +10,12 @@ body {
   color: $DefaultFontColor;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .container {
   margin: 0 auto;
   max-width: 75rem;
