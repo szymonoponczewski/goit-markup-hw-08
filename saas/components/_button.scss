@@ -24,7 +24,6 @@
 
 .main-header__button--order {
   padding: 0.63rem 2.56rem 0.63rem 2.63rem;
- 
 }
 
 .element__nav-button {
@@ -93,11 +92,11 @@
 
 .js-close-menu {
   position: absolute;
-  width: 40px;
-  height: 40px;
-  font-size: 25px;
-  top: 21px;
-  right: 25px;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1.563rem;
+  top: 1.313rem;
+  right: 1.563rem;
   cursor: pointer;
   transition-property: color;
   transition-duration: $TransitionDuration;

@@ -14,15 +14,15 @@
 .main-slogan__wrapper {
   @extend .container;
   text-align: center;
-  padding: 118px 58px 118px 57px;
+  padding: 7.375rem 3.625rem 7.373rem 3.563rem;
 }
 
 .wrapper__main-header {
   color: $SecondaryFontColor;
   text-transform: uppercase;
   text-align: center;
-  width: 365px;
-  margin-bottom: 30px;
+  width: 22.813rem;
+  margin-bottom: 1.875rem;
   font-weight: 900;
   font-size: 1.625rem;
   letter-spacing: 0.06em;
@@ -77,7 +77,7 @@
   }
 
   .main-slogan__wrapper {
-    padding: 200px 0;
+    padding: 12.5rem 0;
   }
 
   .wrapper__main-header {

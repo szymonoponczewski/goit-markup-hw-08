@@ -13,7 +13,7 @@
   transition-property: box-shadow;
   transition-duration: $TransitionDuration;
   transition-timing-function: $TransitionTimingFunction;
-
+  flex-basis: calc((100% - 5.62rem) / 3);
   &:hover {
     box-shadow: 0rem 0.06rem 0.06rem rgba(0, 0, 0, 0.12), 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.06),
       0.06rem 0.25rem 0.36rem rgba(0, 0, 0, 0.16);
@@ -69,16 +69,4 @@
   color: $ClickablesColor;
   font-size: 1rem;
   line-height: 1.9;
-}
-
-// TABLET //
-// @media screen and (min-width: $TabletStart) and (max-width: $TabletEnd) {
-
-// }
-
-// DESKTOP //
-@media screen and (min-width: $DesktopStart) {
-  .set__product-item {
-    flex-basis: calc((100% - 5.62rem) / 3);
-  }
 }
