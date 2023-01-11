@@ -21,7 +21,6 @@
   color: $SecondaryFontColor;
   text-transform: uppercase;
   text-align: center;
-  width: 22.813rem;
   margin-bottom: 1.875rem;
   font-weight: 900;
   font-size: 1.625rem;
@@ -77,11 +76,15 @@
   }
 
   .main-slogan__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 12.5rem 0;
   }
 
   .wrapper__main-header {
-    width: 43.5rem;
+    max-width: 43.5rem;
     font-size: 2.75rem;
     line-height: 1.4;
   }
