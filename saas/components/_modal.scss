@@ -12,7 +12,7 @@
   top: 50%;
   left: 50%;
   width: 28.125rem;
-  height: 38.063rem;
+  min-height: 38.063rem;
   padding: 2.5rem;
   background-color: $ModalBackgroundColor;
   transform: translate(-50%, -50%);
@@ -64,7 +64,7 @@
 }
 
 .label__input {
-  width: 23.125rem;
+  min-width: 23.125rem;
   height: 2.5rem;
   padding-left: 2.63rem;
   border: 0.06rem solid rgba(33, 33, 33, 0.2);
@@ -88,8 +88,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 0.88rem;
-  line-height: 1.5rem;
+  font-size: 0.75rem;
+  line-height: 1.14rem;
   letter-spacing: 0.03em;
   color: $ClickablesColor;
 }
@@ -170,19 +170,21 @@
 // DESKTOP //
 @media screen and (min-width: $DesktopStart) {
   .modal {
-    max-width: 33rem;
+    width: 33rem;
     height: 36.313rem;
   }
+
   .label__input {
     max-width: 28rem;
   }
 
-  .contact__button--modal {
-    position: absolute;
-    bottom: 2.5rem;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 12.5rem;
-    height: 3.13rem;
+  .modal-form__footer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.03em;
   }
 }

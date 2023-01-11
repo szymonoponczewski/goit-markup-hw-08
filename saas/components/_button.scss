@@ -81,14 +81,14 @@
   @extend .button;
 }
 
-// .contact__button--modal {
-//   position: absolute;
-//   bottom: 2.5rem;
-//   left: 50%;
-//   transform: translateX(-50%);
-//   width: 12.5rem;
-//   height: 3.13rem;
-// }
+.contact__button--modal {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12.5rem;
+  height: 3.13rem;
+}
 
 .js-close-menu {
   position: absolute;
