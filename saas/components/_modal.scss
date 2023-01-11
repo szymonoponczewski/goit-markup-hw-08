@@ -11,8 +11,8 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 33rem;
-  height: 36.31rem;
+  width: 28.125rem;
+  height: 38.063rem;
   padding: 2.5rem;
   background-color: $ModalBackgroundColor;
   transform: translate(-50%, -50%);
@@ -64,7 +64,7 @@
 }
 
 .label__input {
-  width: 28rem;
+  width: 23.125rem;
   height: 2.5rem;
   padding-left: 2.63rem;
   border: 0.06rem solid rgba(33, 33, 33, 0.2);
@@ -165,4 +165,24 @@
   top: 1.81rem;
   fill: rgb(33, 33, 33);
   transition: fill $TransitionDuration $TransitionTimingFunction;
+}
+
+// DESKTOP //
+@media screen and (min-width: $DesktopStart) {
+  .modal {
+    max-width: 33rem;
+    height: 36.313rem;
+  }
+  .label__input {
+    max-width: 28rem;
+  }
+
+  .contact__button--modal {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12.5rem;
+    height: 3.13rem;
+  }
 }
