@@ -170,7 +170,7 @@
 // DESKTOP //
 @media screen and (min-width: $DesktopStart) {
   .modal {
-    width: 33rem;
+    max-width: 33rem;
     height: 36.313rem;
   }
 
