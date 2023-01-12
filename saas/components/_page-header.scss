@@ -62,6 +62,7 @@
   transition-timing-function: $TransitionTimingFunction;
   &:focus {
     color: $HoverColor;
+    outline: none;
   }
 }
 
@@ -76,6 +77,7 @@
   transition-timing-function: $TransitionTimingFunction;
   &:focus {
     color: $HoverColor;
+    outline: none;
   }
 }
 

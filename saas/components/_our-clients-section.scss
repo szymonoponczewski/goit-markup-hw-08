@@ -51,6 +51,10 @@
   border-radius: 0.25rem;
 }
 
+.client-card__link:focus {
+  outline: none;
+}
+
 // TABLET //
 @media screen and (min-width: $TabletStart) and (max-width: $TabletEnd) {
   .list__client-card {

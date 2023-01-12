@@ -1,7 +1,7 @@
 .main-slogan {
   margin: 0 auto;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url('../images/section/header_background1600.jpg');
+    url('../images/section/header_background.jpg');
   background-color: rgba(47, 48, 58, 0.4);
   background-size: cover;
   background-repeat: no-repeat;
@@ -87,5 +87,22 @@
     max-width: 43.5rem;
     font-size: 2.75rem;
     line-height: 1.4;
+  }
+}
+
+// TABLET //
+@media (min-width: $TabletStart) and (max-width: $DesktopStart) {
+  .main-slogan {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../images/section/header_background768.jpg');
+  }
+}
+
+// HIGH PPI DEVICE //
+
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .main-slogan {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../images/section/header_background@2x.jpg');
   }
 }
