@@ -12,6 +12,8 @@
   top: 50%;
   left: 50%;
   padding: 2.5rem;
+  width: calc(100vw - 1.25rem);
+  max-width: 28.125rem;
   min-height: 38.063rem;
   text-align: center;
   background-color: $ModalBackgroundColor;
@@ -46,7 +48,6 @@
   font-size: 1.25rem;
   line-height: 1.44rem;
   text-align: center;
-  letter-spacing: 0.03em;
   margin-bottom: 0.5rem;
   color: $DefaultFontColor;
 }
@@ -170,31 +171,12 @@
   transition: fill $TransitionDuration $TransitionTimingFunction;
 }
 
-// TABLET //
-@media screen and (min-width: $TabletStart) and (max-width: $TabletEnd) {
-  .modal {
-    width: 33rem;
-  }
-}
-
 // DESKTOP //
 @media screen and (min-width: $DesktopStart) {
   .modal {
-    width: 33rem;
-    height: 36.313rem;
+    max-width: 33rem;
   }
-
-  .label__input {
-    max-width: 28rem;
-  }
-
   .modal-form__footer {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-size: 0.875rem;
-    line-height: 1.5rem;
-    letter-spacing: 0.03em;
   }
 }
