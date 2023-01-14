@@ -9,6 +9,7 @@
 .wrapper__list {
   @extend .list-display;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .link__client-icon {
