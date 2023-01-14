@@ -11,9 +11,9 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  min-width: 28.125rem;
-  min-height: 38.063rem;
   padding: 2.5rem;
+  min-height: 38.063rem;
+  text-align: center;
   background-color: $ModalBackgroundColor;
   transform: translate(-50%, -50%);
   transition-duration: $TransitionDuration;
@@ -56,6 +56,7 @@
   position: relative;
   flex-direction: column;
   justify-content: center;
+  text-align: left;
   row-gap: 0.25rem;
   font-size: 0.75rem;
   line-height: 0.88rem;
@@ -64,7 +65,7 @@
 }
 
 .label__input {
-  min-width: 23.125rem;
+  min-width: 13.125rem;
   height: 2.5rem;
   padding-left: 2.63rem;
   border: 0.06rem solid rgba(33, 33, 33, 0.2);
@@ -95,7 +96,9 @@
 }
 
 .form-footer__policy-label {
+  margin-top: 1.25rem;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 
@@ -167,10 +170,17 @@
   transition: fill $TransitionDuration $TransitionTimingFunction;
 }
 
-/* DESKTOP */
+// TABLET //
+@media screen and (min-width: $TabletStart) and (max-width: $TabletEnd) {
+  .modal {
+    width: 33rem;
+  }
+}
+
+// DESKTOP //
 @media screen and (min-width: $DesktopStart) {
   .modal {
-    max-width: 33rem;
+    width: 33rem;
     height: 36.313rem;
   }
 
